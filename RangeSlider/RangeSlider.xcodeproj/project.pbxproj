@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F33987AB1D19B07E00674D94 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33987AA1D19B07E00674D94 /* RangeSliderTrackLayer.swift */; };
 		F392A9521D1869BF00EAEE70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392A9511D1869BF00EAEE70 /* AppDelegate.swift */; };
 		F392A9541D1869BF00EAEE70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392A9531D1869BF00EAEE70 /* ViewController.swift */; };
 		F392A9571D1869BF00EAEE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F392A9551D1869BF00EAEE70 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F33987AA1D19B07E00674D94 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		F392A94E1D1869BF00EAEE70 /* RangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F392A9511D1869BF00EAEE70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F392A9531D1869BF00EAEE70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				F392A95D1D1869BF00EAEE70 /* Info.plist */,
 				F392A9631D186A9600EAEE70 /* RangeSlider.swift */,
 				F392A9651D187AA600EAEE70 /* RangeSliderKnobLayer.swift */,
+				F33987AA1D19B07E00674D94 /* RangeSliderTrackLayer.swift */,
 			);
 			path = RangeSlider;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F392A9661D187AA700EAEE70 /* RangeSliderKnobLayer.swift in Sources */,
+				F33987AB1D19B07E00674D94 /* RangeSliderTrackLayer.swift in Sources */,
 				F392A9541D1869BF00EAEE70 /* ViewController.swift in Sources */,
 				F392A9641D186A9600EAEE70 /* RangeSlider.swift in Sources */,
 				F392A9521D1869BF00EAEE70 /* AppDelegate.swift in Sources */,
@@ -294,6 +298,7 @@
 				F392A9621D1869BF00EAEE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

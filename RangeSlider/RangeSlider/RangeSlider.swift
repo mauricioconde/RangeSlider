@@ -15,28 +15,31 @@ class RangeSlider: UIControl {
     var minimumValue: CGFloat = 0.0
     var upperValue: CGFloat = 8.0
     var lowerValue: CGFloat = 2.0
-    var trackLayer: CALayer
+    var trackLayer: RangeSliderTrackLayer
     var upperKnobLayer: RangeSliderKnobLayer
     var lowerKnobLayer: RangeSliderKnobLayer
     var knobWidth: CGFloat = 0.0
     var usableTrackLength: CGFloat = 0.0
     var previousTouchPoint: CGPoint
+    
+    var trackColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0)
+    var trackHighlightColor = UIColor(white: 0.9, alpha: 1.0)
+    var knobColour =  UIColor.whiteColor()
+    var curvaceousness: CGFloat = 1.0
+
 
     
     override init(frame: CGRect) {
         previousTouchPoint = CGPoint.zero
-        trackLayer = CALayer()
-        trackLayer.backgroundColor = UIColor.blueColor().CGColor
+        trackLayer = RangeSliderTrackLayer()
         
         upperKnobLayer = RangeSliderKnobLayer()
-        upperKnobLayer.backgroundColor = UIColor.greenColor().CGColor
-        
         lowerKnobLayer = RangeSliderKnobLayer()
-        lowerKnobLayer.backgroundColor = UIColor.greenColor().CGColor
         
         super.init(frame: frame)
         upperKnobLayer.slider = self
         lowerKnobLayer.slider = self
+        trackLayer.slider = self
         self.layer.addSublayer(trackLayer)
         self.layer.addSublayer(upperKnobLayer)
         self.layer.addSublayer(lowerKnobLayer)
@@ -115,6 +118,7 @@ class RangeSlider: UIControl {
         
         CATransaction.commit()
         
+        self.sendActionsForControlEvents(UIControlEvents.ValueChanged)
         return true
         
     }

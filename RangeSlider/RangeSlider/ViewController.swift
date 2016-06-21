@@ -19,17 +19,19 @@ class ViewController: UIViewController {
         let margin: CGFloat = 20.0
         let sliderFrame = CGRectMake(margin, 100, self.view.frame.size.width - margin * 2 , 30)
         rangeSlider = RangeSlider(frame: sliderFrame)
-        rangeSlider.backgroundColor = UIColor.redColor()
-        
+        rangeSlider.addTarget(self,
+                              action: #selector(ViewController.slideValueChanged(_:)),
+                              forControlEvents: UIControlEvents.ValueChanged)
         self.view.addSubview(rangeSlider)
-        
-        //rangeSlider.addTarget(self, action: #selector(ViewController), forControlEvents: UIControlEvents.ValueChanged)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func slideValueChanged(sender: UIControl){
+        print("slider value changed: \(rangeSlider.lowerValue), \(rangeSlider.upperValue)")
     }
 
 
